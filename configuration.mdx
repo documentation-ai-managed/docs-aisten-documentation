@@ -1,0 +1,145 @@
+---
+title: Configuring Your Documentation Space
+description: Learn how to customize your documentation environment, including themes, permissions, and integrations for optimal use.
+---
+
+## Overview
+
+Customize your aisten documentation space to match your brand and team needs. You set themes with colors like `#3B82F6`, manage user roles, handle exports and imports, and connect integrations. These settings ensure your docs align with your project workflow.
+
+<Columns cols={2}>
+  <Card title="Theme Setup" icon="palette" href="#theme-and-branding">
+    Apply your brand colors and logos quickly.
+  </Card>
+  <Card title="Permissions" icon="shield" href="#user-roles-and-permissions">
+    Control who edits and views content.
+  </Card>
+  <Card title="Export/Import" icon="upload" href="#export-and-import-options">
+    Migrate content between platforms.
+  </Card>
+  <Card title="Integrations" icon="plug" href="#integrations">
+    Connect with GitHub, Slack, and more.
+  </Card>
+</Columns>
+
+## Theme and Branding
+
+Tailor your docs appearance starting with the brand color `#3B82F6`.
+
+<Steps>
+  <Step title="Access Settings" icon="settings">
+    Navigate to your space settings panel.
+  </Step>
+  <Step title="Update Colors" icon="palette">
+    Enter your primary color as `#3B82F6`.
+  </Step>
+  <Step title="Upload Logo" icon="image">
+    Add a logo file under the branding section.
+  </Step>
+  <Step title="Preview Changes" icon="eye">
+    Save and preview the updated theme.
+  </Step>
+</Steps>
+
+Configure advanced theme options in `aisten.config.json`:
+
+<CodeGroup tabs="JSON,YAML">
+```json
+{
+  "theme": {
+    "primaryColor": "#3B82F6",
+    "logo": "/path/to/logo.svg",
+    "fontFamily": "Inter, sans-serif"
+  }
+}
+```
+
+```yaml
+theme:
+  primaryColor: "#3B82F6"
+  logo: /path/to/logo.svg
+  fontFamily: Inter, sans-serif
+```
+</CodeGroup>
+
+<Callout kind="tip">
+  Test your theme across light and dark modes for best results.
+</Callout>
+
+## User Roles and Permissions
+
+Define roles to secure your documentation.
+
+| Role       | Can Edit | Can View | Can Admin |
+|------------|----------|----------|-----------|
+| Viewer     | No       | Yes      | No        |
+| Editor     | Yes      | Yes      | No        |
+| Admin      | Yes      | Yes      | Yes       |
+
+Assign roles via the members tab. Use `{role: "editor"}` in API calls for programmatic access.
+
+## Export and Import Options
+
+Transfer content seamlessly.
+
+<Tabs>
+  <Tab title="Export to MDX" icon="code">
+    Select pages and download as MDX files.
+    
+    Example CLI command:
+    ```bash
+    aisten export --format=mdx --output=./docs
+    ```
+  </Tab>
+  <Tab title="Import from Markdown" icon="file-text">
+    Upload Markdown folders to import.
+    
+    ```bash
+    aisten import --source=./markdown-docs --space=my-space
+    ```
+  </Tab>
+  <Tab title="PDF Export" icon="file">
+    Generate PDFs for static sharing.
+    
+    Set options like `margin: 1in`.
+  </Tab>
+</Tabs>
+
+## Integrations
+
+Connect aisten with external tools.
+
+<ExpandableGroup>
+  <Expandable title="GitHub Sync" default-open="true">
+    Link your repo for automatic deployments.
+    
+    Add webhook: `https://api.aisten.com/webhooks/github/YOUR_WEBHOOK_ID`
+    
+    <CodeGroup tabs="Env Var,Config">
+    ```bash
+    AISTEN_GITHUB_TOKEN=your-github-token-here
+    ```
+    
+    ```json
+    {
+      "integrations": {
+        "github": {
+          "repo": "your-org/your-repo",
+          "token": "YOUR_GITHUB_TOKEN"
+        }
+      }
+    }
+    ```
+    </CodeGroup>
+  </Expandable>
+  
+  <Expandable title="Slack Notifications">
+    Receive updates on doc changes.
+    
+    Use `https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK` as the endpoint.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="info">
+  Review integration permissions before enabling production use.
+</Callout>

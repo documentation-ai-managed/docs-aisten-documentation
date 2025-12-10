@@ -1,0 +1,117 @@
+---
+title: Welcome to aisten Documentation
+description: An overview of aisten Documentation, your default space for organizing and managing project documentation with ease.
+---
+
+## Overview
+
+aisten Documentation provides a centralized hub for your project's docs. You create, organize, and publish documentation effortlessly. This space supports Markdown, MDX components, and custom branding to match your needs.
+
+<Callout kind="info">
+  Customize your docs with the brand color `#3B82F6` for consistency across all pages.
+</Callout>
+
+## Key Benefits and Features
+
+You gain powerful tools to streamline documentation workflows. Explore the main advantages through these feature cards.
+
+<Columns cols={3}>
+  <Card title="Intuitive Editor" icon="edit-3" href="/docs/editor">
+    Write in Markdown or MDX with live previews. Add components like Steps and Tabs directly.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="/docs/versions">
+    Track changes with Git integration. Roll back or branch docs as needed.
+  </Card>
+  <Card title="Search and Navigation" icon="search" href="/docs/search">
+    Full-text search and sidebar navigation help users find content quickly.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Follow these steps to set up your first documentation page.
+
+<Steps>
+  <Step title="Create a Page" icon="plus">
+    Navigate to the dashboard and click "New Page". Choose `introduction.mdx` as your template.
+  </Step>
+  <Step title="Add Content" icon="edit">
+    Use H2 headings and components. Start with frontmatter for title and description.
+  </Step>
+  <Step title="Publish" icon="upload-cloud">
+    Save and deploy. Share the live URL with your team.
+  </Step>
+</Steps>
+
+## Navigation Guide
+
+Switch between views to manage your docs efficiently.
+
+<Tabs>
+  <Tab title="Sidebar" icon="sidebar">
+    Use the left sidebar for page hierarchy. Drag and drop to reorganize sections.
+  </Tab>
+  <Tab title="Search" icon="search">
+    Type queries in the top search bar. Filter by tags or recent updates.
+  </Tab>
+  <Tab title="Settings" icon="settings">
+    Access global settings under your profile. Configure brand color and themes.
+  </Tab>
+</Tabs>
+
+## Customization Examples
+
+Integrate aisten Documentation into your apps with simple code snippets.
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Embed docs widget
+  import { AistenDocs } from '@aisten/docs-sdk';
+
+  const docs = new AistenDocs({
+    spaceId: 'your-space-id',
+    themeColor: '#3B82F6'
+  });
+  docs.render('#docs-container');
+  ```
+  ```python
+  # Python client example
+  from aisten_docs import Client
+
+  client = Client(space_id='your-space-id')
+  client.set_theme(color='#3B82F6')
+  client.embed(container_id='docs-container')
+  ```
+</CodeGroup>
+
+## Brand Guidelines
+
+<Expandable title="Detailed Brand Guidelines" default-open="false">
+
+Follow these rules to maintain consistency.
+
+### Primary Color
+Use `#3B82F6` for buttons, links, and accents.
+
+```css
+:root {
+  --brand-primary: #3B82F6;
+  --brand-hover: #2563EB;
+}
+```
+
+### Typography
+- Headings: Bold, 1.2em line height
+- Body: 16px base, sans-serif
+
+| Element     | Font Size | Weight |
+|-------------|-----------|--------|
+| H2-H4       | 24px-18px | Bold   |
+| Paragraphs  | 16px      | Normal |
+| Code        | 14px      | Mono   |
+
+Avoid custom fonts unless specified.
+
+</Expandable>
+
+This setup ensures your documentation stays professional and on-brand. Explore more in the linked sections to build comprehensive guides.

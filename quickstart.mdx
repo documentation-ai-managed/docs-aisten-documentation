@@ -1,0 +1,105 @@
+---
+title: Get Started with aisten Documentation
+description: A step-by-step guide to set up your first documentation project and begin organizing your content quickly.
+---
+
+## Overview
+
+Get started with aisten Documentation in minutes. This guide walks you through creating an account, setting up your space, adding content, and mastering basic navigation. Organize your project docs efficiently with aisten's intuitive interface and powerful MDX components.
+
+<Callout kind="tip">
+  Bookmark your space dashboard for quick access. Use the search bar to find pages instantly.
+</Callout>
+
+## Create an Account
+
+Follow these steps to sign up and access your documentation workspace.
+
+<Steps>
+  <Step title="Visit the aisten Site" icon="globe">
+    Navigate to `https://aisten.com` and click **Sign Up**.
+  </Step>
+  <Step title="Enter Details" icon="user">
+    Provide your email, create a strong password, and verify your account via email link.
+  </Step>
+  <Step title="Complete Profile" icon="check-circle">
+    Select your workspace name, like `my-project-docs`, and choose a plan (free tier works for starters).
+  </Step>
+</Steps>
+
+## Set Up Your Documentation Space
+
+Configure your space to match your project needs.
+
+<Columns cols={2}>
+  <Card title="Import Existing Docs" icon="upload" href="#">
+    Bring in Markdown or MDX files from GitHub.
+  </Card>
+  <Card title="Customize Theme" icon="palette" href="#">
+    Set your brand color to `#3B82F6` and add a logo.
+  </Card>
+  <Card title="Enable Features" icon="settings" href="#">
+    Turn on search, analytics, and version history.
+  </Card>
+  <Card title="Invite Team" icon="users" href="#">
+    Add collaborators with edit or view permissions.
+  </Card>
+</Columns>
+
+## Add Your First Page or Section
+
+Create content using aisten's editor. Use MDX for rich components like Steps and Cards.
+
+<Tabs>
+  <Tab title="New Page" icon="plus">
+    <Steps>
+      <Step title="Create Page">
+        Click **New Page** in the sidebar, name it `quickstart.mdx`, and select MDX format.
+      </Step>
+      <Step title="Add Frontmatter">
+        Insert YAML frontmatter at the top:
+      </Step>
+    </Steps>
+
+    <CodeGroup tabs="MDX">
+```mdx
+---
+title: My First Page
+description: Sample documentation page.
+---
+```
+    </CodeGroup>
+  </Tab>
+  <Tab title="New Section" icon="folder">
+    Organize pages into sections. Click **New Section**, name it `guides/`, and nest pages inside.
+  </Tab>
+</Tabs>
+
+## Basic Navigation and Editing Tips
+
+Master the interface quickly.
+
+<ExpandableGroup>
+  <Expandable title="Keyboard Shortcuts" default-open="true">
+    Use `<kbd>Ctrl</kbd>+<kbd>S</kbd>` to save, `<kbd>Ctrl</kbd>+<kbd>K</kbd>` for search, and `<kbd>Ctrl</kbd>+<kbd>/</kbd>` for commands.
+  </Expandable>
+  <Expandable title="Preview Mode">
+    Toggle live preview with the eye icon. Edit markdown and see changes instantly.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="success">
+  Preview your site at `https://your-space.aisten.com` after publishing.
+</Callout>
+
+## Next Steps
+
+Explore advanced features:
+
+| Feature | Description | Link |
+|---------|-------------|------|
+| Custom Domains | Connect your domain | [Setup](/docs/domains) |
+| API Integration | Automate content | [API Docs](/docs/api) |
+| Version Control | Track changes | [Git Sync](/docs/git) |
+
+Your documentation space is ready. Publish and share with your team.

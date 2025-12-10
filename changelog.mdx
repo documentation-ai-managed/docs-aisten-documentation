@@ -1,0 +1,133 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and fixes in aisten Documentation to stay informed on new features.
+---
+
+## Changelog Overview
+
+Stay current with aisten Documentation releases. You receive new features, performance improvements, and bug fixes regularly. Review changes below to understand impacts on your documentation workflows.
+
+<Callout kind="info">
+  Subscribe to our RSS feed or GitHub notifications to get instant alerts on new versions.
+</Callout>
+
+## Recent Releases
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Added real-time collaboration for teams editing docs simultaneously
+- Introduced custom themes with brand color support like `#3B82F6`
+- New search indexing for faster page lookups
+
+## Improvements
+
+- Enhanced MDX parsing speed by 40% for large documentation sites
+- Better mobile responsiveness on documentation previews
+
+## Bug Fixes
+
+- Fixed parsing errors with nested `{` and `}` in code blocks
+- Resolved heading hierarchy skips in auto-generated pages
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Integrated Mermaid diagram support via code blocks
+- Added `<Update>` component for changelog entries
+
+## Improvements
+
+- Optimized image loading with automatic width/height detection
+- Streamlined JSX component escaping rules
+
+## Bug Fixes
+
+- Corrected attribute quoting in `<Card>` and `<Tabs>` components
+- Fixed blank line requirements inside JSX containers
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Launched core MDX documentation generator
+- Full component library including `<Steps>`, `<Tabs>`, and `<Columns>`
+
+## Breaking Changes
+
+- Removed H1 headings; use frontmatter titles exclusively
+- Mandatory double quotes for all JSX string attributes
+
+## Initial Setup
+
+- Basic YAML frontmatter validation
+- Escaped special characters in prose
+
+</Update>
+
+## Upgrade Guide
+
+Follow these steps to update your aisten Documentation site.
+
+<Steps>
+  <Step title="Check Current Version" icon="package">
+    Run `npm list aisten-docs` in your project root.
+  </Step>
+  <Step title="Install Latest" icon="download">
+    <CodeGroup tabs="npm,yarn">
+```bash
+npm install aisten-docs@latest
+```
+```bash
+yarn add aisten-docs@latest
+```
+    </CodeGroup>
+  </Step>
+  <Step title="Verify Changes" icon="check-circle">
+    Review `changelog.mdx` and test parsing with `npm run build`.
+  </Step>
+</Steps>
+
+## Feature Comparison
+
+<Columns cols={3}>
+  <Card title="v1.0" icon="package" horizontal>
+    Core components and parsing rules.
+  </Card>
+  <Card title="v1.1" icon="zap" horizontal>
+    Mermaid and Update support.
+  </Card>
+  <Card title="v1.2" icon="users" horizontal>
+    Collaboration and themes.
+  </Card>
+</Columns>
+
+## Upcoming Roadmap
+
+<ExpandableGroup>
+  <Expandable title="Q4 2024: AI Assistance" default-open="true">
+    Integrate AI-powered content suggestions and auto-MDX generation.
+  </Expandable>
+  <Expandable title="Q1 2025: Advanced Analytics">
+    Track documentation views and engagement metrics.
+  </Expandable>
+</ExpandableGroup>
+
+<Tabs>
+  <Tab title="Stay Updated" icon="bell">
+    Enable GitHub notifications for the repo.
+  </Tab>
+  <Tab title="Contribute" icon="github">
+    Submit pull requests for new components.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Test updates in a staging environment before production deployment.
+</Callout>
